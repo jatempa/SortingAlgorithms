@@ -29,7 +29,7 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void selectBubbleSortMethod() throws Exception {
+    public void selectBubbleSortMethod() {
         onView(withId(R.id.radioBubble))
                 .perform(click())
                 .check(matches(isChecked()));
@@ -46,7 +46,7 @@ public class MainActivityTest {
     }
 
     @Test
-    public void selectMergeSortMethod() throws Exception {
+    public void selectMergeSortMethod() {
         onView(withId(R.id.radioMerge))
                 .perform(click())
                 .check(matches(isChecked()));
@@ -63,7 +63,7 @@ public class MainActivityTest {
     }
 
     @Test
-    public void selectQuickSortMethod() throws Exception {
+    public void selectQuickSortMethod() {
         onView(withId(R.id.radioQuick))
                 .perform(click())
                 .check(matches(isChecked()));
