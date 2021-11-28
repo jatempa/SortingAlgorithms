@@ -7,12 +7,9 @@ import com.demo.sortingalgorithms.sortingalgorithms.MergeSort;
 import com.demo.sortingalgorithms.sortingalgorithms.QuickSort;
 import com.demo.sortingalgorithms.sortingalgorithms.SortingAlgorithms;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -32,42 +29,42 @@ public class ExampleUnitTest {
     public void testBubbleSortMethod() {
         method = new BubbleSort();
         outputValues = method.sort(inputValues);
-        Assert.assertTrue(94 == outputValues[4]);
+        Assert.assertEquals(94, outputValues[4]);
     }
 
     @Test
     public void testMergeSortMethod() {
         method = new MergeSort();
         outputValues = method.sort(inputValues);
-        Assert.assertTrue(94 == outputValues[4]);
+        Assert.assertEquals(94, outputValues[4]);
     }
 
     @Test
     public void testQuickSortMethod() {
         method = new QuickSort();
         outputValues = method.sort(inputValues);
-        Assert.assertTrue(94 == outputValues[4]);
+        Assert.assertEquals(94, outputValues[4]);
     }
 
     @Test
     public void testConvertInputValues() {
         String values = " 3, 52, 12,94, 83,";
         outputValues = convertInputValues(values);
-        Assert.assertTrue(94 == outputValues[3]);
+        Assert.assertEquals(94, outputValues[3]);
     }
 
     @Test
     public void testRegexToRemoveSpaceBetweenNumbers() {
         String values = " 3, 52, 1 2,94, 8 3,";
         outputValues = convertInputValues(values);
-        Assert.assertTrue(12 == outputValues[2]);
+        Assert.assertEquals(12, outputValues[2]);
     }
 
     @Test
     public void testValidationDigits() {
         String values = " 3, 5S, 12,9A, 83,";
         outputValues = convertInputValues(values);
-        Assert.assertTrue(83 == outputValues[4]);
+        Assert.assertEquals(83, outputValues[4]);
     }
 
     @Test
@@ -76,7 +73,7 @@ public class ExampleUnitTest {
         method = new QuickSort();
         inputValues = convertInputValues(values);
         outputValues = method.sort(inputValues);
-        Assert.assertTrue(83 == outputValues[4]);
+        Assert.assertEquals(83, outputValues[4]);
     }
 
     @Test
